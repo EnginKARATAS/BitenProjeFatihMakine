@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "news";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<div class="inner-banner text-center">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="index-3.html">Ana Sayfa</a>
+            </li>
+            <li>
+                <span>Haberler</span>
+            </li>
+        </ul><!-- /.breadcrumb -->
+        <h1>Haberler</h1>
+    </div><!-- /.container -->
+</div><section class="sec-pad blog-page">
+    <div class="container">
+        <div class="row">
+            <!-- /.col-lg-4 -->
+            @Html.Raw(TempData["haberler"])
+        </div><!-- /.row -->
+        <div class="blog-post-pagination text-center">
+            <a class="prev" href="#"><i class="fa fa-arrow-left"></i></a>
+            <!--
+            -->
+            <a class="active" href="#">01</a>
+            <!--
+            -->
+            <a href="#">02</a>
+            <!--
+            -->
+            <a href="#">03</a>
+            <!--
+            -->
+            <a href="#">04</a>
+            <!--
+            -->
+            <a href="#">05</a>
+            <!--
+            -->
+            <a class="next" href="#"><i class="fa fa-arrow-right"></i></a>
+        </div><!-- /.blog-post-pagination -->
+    </div><!-- /.container -->
+</section>

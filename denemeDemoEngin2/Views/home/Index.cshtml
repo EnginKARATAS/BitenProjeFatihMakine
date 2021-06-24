@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-content-style-three slider-home-three">
+    <ol class="carousel-indicators">
+        @Html.Raw(TempData["sliderAlt"])
+    </ol>
+
+
+    <div class="carousel-inner">
+        @Html.Raw(TempData["slider"])
+    </div>
+    <!-- Controls -->
+    <a class="carousel-control-prev carousel-control-one-prev" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
+        <i class="fa fa-arrow-left"></i>
+        <span class="sr-only">İleri</span>
+    </a>
+    <a class="carousel-control-next carousel-control-one-next" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
+        <i class="fa fa-arrow-right"></i>
+        <span class="sr-only">Geri</span>
+    </a>
+</div>
+
+<section class="about-style-four sec-pad">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6" style=" background-image: url(~/images/bloghead.png);
+    background-size: contain;
+    background-repeat: no-repeat;" );="">
+                <img src="~/images/bloghead.png" alt="alters" />
+
+            </div>
+            <p class="col-lg-6">@TempData["indexMetin1"]</p>
+            
+        </div>
+    </div>
+    <br><br><br>
+</section>
+
+
+
+
+
+
+<div class="trusted-clients-two-upper-image-block clearfix gray-bg">
+    <img src="~/images/trusted-2-1.jpg" class="trusted-client-main-image" alt="Awesome Image">
+</div>
+
+<section class="trusted-clients-two gray-bg">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-lg-6">
+                    <div class="tructed-client-text-image-box clearfix">
+                        <div class="image-block">
+                            <img src="~/images/trusted-2-2.jpg" style="width:525px;">
+                        </div><!-- /.image-block -->
+                        <!-- /.text-block -->
+                    </div><!-- /.tructed-client-text-image-box -->
+                </div><!-- /.col-lg-6 -->
+            </div>
+            <div class="col-lg-6" style="background-image:images/bloghead.png;">
+                <div class="trusted-client-content-block">
+                    <div class="inner-content" id="git">
+                        <h3>@(Session["dil"] == null ? TempData["ortaBaslik"] : Session["dil"].ToString() == "tr" ? "Hakkımızda bilgi edinin" : " Everything about us")</h3>
+                        <p>@TempData["indexMetin2"]</p>
+                        <a href="/home/about" class="thm-btn style-two">@(Session["dil"] == null ? "Biz Kimiz?" : Session["dil"].ToString() == "tr" ? "Biz Kimiz?" : "Who are we?")</a>
+
+                    </div><!-- /.inner-content -->
+                </div><!-- /.trusted-client-content-block -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div>
+    <!--
+        br/.container -->
+    <br><br>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="well">
+      
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+
+                        <div class="row">
+
+                            
+
+                            @Html.Raw(TempData["indexProductCards"])
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br /> <br /> <br />
+<section class="cta-style-three">
+    <div class="container">
+        <h2 class="display-3" style="color:#aeecd0;;font-size: 3.5rem;">@TempData["indexDivBaslik"]<br></h2><h4 style="    color: #d2cfec;">@TempData["indexDivAltBaslik"]</h4>
+        <a href="/home/products" class="thm-btn">@(Session["dil"] == null ? "İNCELE" : Session["dil"].ToString() == "tr" ? "İNCELE" : "REVİEW")</a>
+    </div><!-- /.container -->
+</section>
+
+<section class="blog-style-three sec-pad">
+    <div class="container">
+        <div class="sec-title text-center">
+            <span class="tag-line">Son Gelişmeler</span>
+            <h2>Haberlerimize Şimdi Bakın</h2>
+        </div><!-- /.sec-title -->
+        <div class="blog-carousel-style-two owl-carousel owl-theme owl-loaded">
+
+            @Html.Raw(TempData["news"])
+            
+
+
+
+        </div>
+    
+    <div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-long-arrow-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-long-arrow-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<div class="brand-carousel-wrapper">
+    <div class="container">
+        <div id="gonow" class="brand-carousel-one owl-theme owl-carousel owl-loaded">
+
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-2360px, 0px, 0px); transition: all 0.7s ease 0s; width: 4720px;">
+                    <div class="owl-item cloned" style="width: 226px; margin-right: 10px;">
+                        <div class="item">
+                            <img src="~/images/6.png" alt="Awesome Image">
+                        </div>
+                        @Html.Raw(TempData["anasayfaReferanslar"])
+                    </div>
+            </div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-long-arrow-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-long-arrow-right"></i></div></div><div class="owl-dots" style="display: none;"></div></div>
+        </div>
+    </div>
+</div>

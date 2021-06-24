@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "products";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+
+<div class="page-wrapper">
+
+    <div class="preloader" style="display: none;"></div><!-- /.preloader -->
+
+
+
+
+
+    <div class="inner-banner text-center">
+        <div class="container">
+            <ul class="breadcrumb">
+
+            </ul><!-- /.breadcrumb -->
+            <h1>@(Session["dil"] == null ? "Ürünler" : Session["dil"].ToString() == "tr" ? "Ürün Kategorileri" : "Products")</h1>
+        </div><!-- /.container -->
+    </div>
+
+
+    <div class="box">
+        <div style="object-fit:contain;margin: 20px 5px; "class="row">
+            @Html.Raw(TempData["urunkategoriler"]);
+        </div>
+    </div>
+
+
+
+
+</div>

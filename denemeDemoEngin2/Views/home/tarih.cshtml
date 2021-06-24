@@ -1,0 +1,101 @@
+﻿
+    @{
+        ViewBag.Title = "tarih";
+        Layout = "~/Views/layout/_Layout.cshtml";
+    }
+
+<section class="about-style-three sec-pad-with-content-margin-30 history-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-12">                <div class="image-block">
+
+    <div class="bubbled-text-block wow fadeIn animated" data-wow-duration="400" style="visibility: visible; animation-name: fadeIn;">
+        <div class="inner-box">
+            <i class="facdori-icon-factory-3"></i>
+            <h3>@TempData["tarihKurulus"] </h3>
+        </div><!-- /.inner-box -->
+    </div><!-- /.bubbled-text-block -->
+    <img src="~/images/plan-1-1.jpg" alt="Awesome Image">
+</div><!-- /.image-block -->
+            </div><!-- /.col-lg-9 -->
+            <div class="col-xl-3 col-lg-12">
+                <div class="text-block base-color-bg">
+                    <h3><a href="#">@TempData["tarihinOrtaBasligi"]</a></h3>
+                    <a href="contact.html" class="more-link">@(Session["dil"] == null ? "İletişim" : Session["dil"].ToString() == "tr" ? "İletişim" : "Contact") </a>
+                </div><!-- /.text-block -->
+            </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="single-about-style-three">
+                    <p>@TempData["tarihparagraf1"]</p>
+                </div><!-- /.single-about-style-three -->
+            </div><!-- /.col-lg-4 -->
+            <!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<div class="row">
+    <div class="col-md-5">
+        <img style="padding-top: 50px;
+    padding-bottom: 100px;" src="~/images\fatih_makina_logo_2.png" alt="Alternate Text">
+
+        <img style="padding-top: 50px;
+    padding-bottom: 100px;" src="~/images\fatih_makina_logo_2.png" alt="Alternate Text">
+    </div>
+    <div class="col-sm-7">
+        <h2>@TempData["tarihBaslik2"]</h2><br>
+        <h4>@TempData["tarihBaslik22"]</h4><br>
+        <p>
+          @TempData["tarihParagraf2"]  
+        </p>
+        <br>
+        <a href="#referans"><button class="btn btn-default btn-lg" style="background-color: #4ba1b3;">@(Session["dil"] == null ? "Şirket referansları" : Session["dil"].ToString() == "tr" ? "Şirket referansları" : "References")</button></a>
+    </div>
+    <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+</div>
+
+
+
+
+<div class="brand-carousel-wrapper">
+    <div class="container">
+        <div class="brand-carousel-one owl-theme owl-carousel owl-loaded">
+            <!-- /.item -->
+            <!-- /.item -->
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-3000px, 0px, 0px); transition: all 0.7s ease 0s; width: 6000px;">
+                    <div class="owl-item" style="width: 570px; margin-right: 30px;">
+                        <div class="item">
+                            <div class="single-blog-style-three text-center">
+                                <div class="image-block">
+                                    <simg src="~/images/blog-2-1.jpg" alt="Awesome Image">
+                                        <div class="overlay">
+                                            <div class="box">
+                                                <div class="content">
+                                                    Buraya Haber Detayı Girilir
+                                                </div><!-- /.content -->
+                                            </div><!-- /.box -->
+                                        </div><!-- /.overlay -->
+                                </div><!-- /.image-block -->
+                                <div class="text-block">
+                                    <div class="meta-info">
+                                        <a href="#">06 ağu, 2019</a>
+                                        <span class="sep">-</span>
+                                        <a href="#"></a>
+                                    </div><!-- /.meta-info -->
+                                    <h3><a href="single-news.html">Teşekkür Ediyoruz Kayseri!</a></h3>
+                                </div><!-- /.text-block -->
+                            </div><!-- /.single-blog-style-three -->
+                        </div>
+                        @Html.Raw(TempData["anasayfaNews"])
+                    </div>
+                </div>
+
+            </div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-long-arrow-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-long-arrow-right"></i></div></div><div class="owl-dots" style="display: none;"></div></div>
+        </div>
+    </div>
+</div>

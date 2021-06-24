@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "newsDetails";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<section class="sec-pad single-blog-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="single-news-content">
+                    <div class="image-block">
+                        <img style="width:100%;height:400px;object-fit:contain;" src="@TempData["newsDetailsİmg1"]" alt="burada resimler olmalıydı Image">
+                    </div>
+
+
+                    <span class="sep">-</span>
+
+                    <h2>@TempData["newsDetailsBaslik"]</h2>
+                    <br>
+                    <p>@TempData["newsDetailsParagraph"]</p>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.Raw(TempData["newsDetailsİmg2"])
+                            
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr class="style-one">
+                <br>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+

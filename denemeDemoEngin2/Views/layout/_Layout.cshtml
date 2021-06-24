@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@TempData["sayfaadi"] | @TempData["firmaadi"]</title>
+    <meta charset="UTF-8" />
+    <title>Anasayfa</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/favicon/apple-icon-57x57.png">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="~/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/hover-min.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/facdori-icon/style.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/bands-icon/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/flag-icon-css/css/flag-icon.min.css">
+
+
+
+    <!-- main template stylesheet -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <style>
+        h1 {
+            style ="font-family: 'Big Shoulders Text', cursive;"
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header header-three">
+        <!-- /.top-bar -->
+        <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky" style="    padding: 13px">
+            <div class="container clearfix">
+                <div class="logo-box clearfix">
+                    <a class="navbar-brand" href="~/home/Index" style="padding: 21px 0;">
+                        <img src="~/images/fatih_makina_logo.png" alt="Awesome Image"  >
+                    </a>
+
+                    <button class="menu-toggler" data-target="#main-nav-bar">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div><!-- /.logo-box -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="main-navigation" id="main-nav-bar">
+                    <ul class=" navigation-box">
+                        <li class=" current">
+                            <a href="~/home/Index">Anasayfa<button class="sub-nav-toggler"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button></a>
+                            <ul class="sub-menu"></ul><!-- /.sub-menu -->
+                        </li>
+                        <li>
+                            <a href="~/home/about">@(Session["dil"] == null ? "Hakkımızda" : Session["dil"].ToString() == "tr" ? "Hakkımızda" : "About")</a> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button></a>
+                            <ul class="sub-menu">
+                                <li><a href="~/home/about">@(Session["dil"] == null ? "Hakkımızda" : Session["dil"].ToString() == "tr" ? "Hakkımızda" : "About")</a></li>
+                                <li><a href="~/home/tarih">Tarihimiz</a></li>
+                            </ul><!-- /.sub-menu -->
+                        </li>
+
+                        <li>
+                            <a href="~/home/products">Ürünlerimiz</a>
+                            <!-- /.sub-menu -->
+                        </li>
+                        <li>
+                            <a href="~/home/news">Haberler</a>
+                            <!-- /.sub-menu -->
+                        </li>
+                        <li><a href="~/home/contact">İletişim</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                <div class="right-side-box">
+
+                    <div class="social">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <!--
+                        -->
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <!--
+                        -->
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div><!-- /.social -->
+                </div><!-- /.right-side-box -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="site-footer">
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget about-widget">
+                            <div class="widget-title">
+                                <h3>Hakkımızda</h3>
+                            </div>
+                            <p>@TempData["foterParagraf"]</p>
+                            <img src="~/images/footer-map-1-1.jpg" alt="Awesome Image">
+                            <a href="https://www.google.com/maps/place/Fatih+Makina/38.7763624,35.4328859,15z/data=!4m2!3m1!1s0x0:0x6728ff4789ee5194?sa=X&amp;ved=2ahUKEwjl3cDUleTkAhULyaYKHQNpBwUQ_BIwCnoECBUQCA" class="find-us-link"><i class="fa fa-map-marker"></i>@(Session["dil"] == null ? "Yerimize Bakın" : Session["dil"].ToString() == "tr" ? "Yerimize Bakın" : "Location")</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <h3>@(Session["dil"] == null ? "biz kimiz" : Session["dil"].ToString() == "tr" ? "biz kimiz" : "who are we")</h3>
+                            </div><!-- /.widget-title -->
+                            <div class="link-wrapper clearfix">
+                                <ul class="link-lists">
+                                    <li><a href="#">@(Session["dil"] == null ? "Hakkımızda" : Session["dil"].ToString() == "tr" ? "Hakkımızda" : "XXX")</a></li>
+                                    <li><a href="#">@(Session["dil"] == null ? "tarihimiz" : Session["dil"].ToString() == "tr" ? "tarihimiz" : "history")</a></li>
+
+                                </ul>
+                                <!-- /.link-lists -->
+                            </div><!-- /.link-wrapper -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget service-links-widget">
+                            <div class="widget-title">
+                                <h3>@(Session["dil"] == null ? "Katagoriler" : Session["dil"].ToString() == "tr" ? "Katagoriler" : "Categories")</h3>
+                            </div><!-- /.widget-title -->
+                            <ul class="link-lists">
+                                <li><a href="#">@(Session["dil"] == null ? "Ürünler" : Session["dil"].ToString() == "tr" ? "Ürünler" : "Products")</a></li>
+                                <li><a href="#">@(Session["dil"] == null ? "İletişim" : Session["dil"].ToString() == "tr" ? "İletişim" : "Contact")</a></li>
+                                <li><a href="#">@(Session["dil"] == null ? "Haberler" : Session["dil"].ToString() == "tr" ? "Haberler" : "News")</a></li>
+                   
+                            </ul><!-- /.link-lists -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget contact-widget">
+                            <ul class="contact-infos">
+                                <li>
+                                    <i class="facdori-icon-placeholder-2"></i>
+                                    @TempData["Adres"]
+                                </li>
+                                <li>
+                                    <i class="facdori-icon-message"></i>
+                                    @TempData["mail"]
+                                </li>
+                                <li>
+                                    <i class="facdori-icon-phone-call-1"></i>
+                                    @TempData["Tel"]
+                                </li>
+                            </ul><!-- /.contact-infos -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.main-footer -->
+        <div class="bottom-footer">
+            <div class="container ">
+                <div class="container-inner clearfix">
+                    <div class="left-content float-left">
+                        <p>@(Session["dil"] == null ? "© Tüm Hakları Saklıdır 2019" : Session["dil"].ToString() == "tr" ? "© Tüm Hakları Saklıdır 2019" : "© All rights reserved")</p>
+                    </div><!-- /.left-content float-left -->
+                    <div class="right-content float-right">
+                        <div class="social">
+                            <a href="#"><i class="fa fa-facebook-f"></i></a>
+                            <!--
+                            -->
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <!--
+                            -->
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <!--
+                            -->
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div><!-- /.social -->
+                    </div><!-- /.left-content float-left -->
+                </div><!-- /.container-inner -->
+            </div><!-- /.container -->
+        </div><!-- /.bottom-footer -->
+    </footer>
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+    <!-- /.scroll-to-top -->
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/bootstrap-select.min.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/theme.js"></script>
+
+
+
+</body>
+</html>

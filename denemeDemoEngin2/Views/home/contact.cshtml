@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "contact";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<div class="inner-banner text-center">
+    <div class="container">
+        <!-- /.breadcrumb -->
+        <h1>@TempData["contactBaslik"]</h1>
+    </div><!-- /.container -->
+</div>
+
+<section class="contact-form-wrapper sec-pad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="sec-title ">
+                        @TempData["contactLittleHeader"]
+                    <span class="tag-line"></span>
+                    <h2>@(Session["dil"] == null ? "Bizimle İletişim Kurmak İstermisiniz" : Session["dil"].ToString() == "tr" ? "Bizimle İletişim Kurmak İstermisiniz" : "Contact Us") ?</h2>
+                </div><!-- /.sec-title -->
+                <div class="single-contact-infos">
+                    <h3>@TempData["contactParagraph"]</h3>
+                    <p>@TempData["tel"]</p>
+                </div>
+                <div class="single-contact-infos">
+                    <h3>@TempData["mailToWhere"]</h3>
+                    <p>
+                        @TempData["mail"]
+                                    </p>
+                </div><!-- /.single-contact-infos -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-lg-7">
+                <form action="http://ashik.templatepath.net/facdori-main-html/inc/sendemail.php" class="contact-form-validated contact-form" novalidate="novalidate">
+                    <input type="text" placeholder="@(Session["dil"] == null ? "Tam İsim" : Session["dil"].ToString() == "tr" ? "Tam İsim" : "Full Name")" name="name">
+                    <input type="text" name="email" placeholder="@(Session["dil"] == null ? "Mail Adresiniz" : Session["dil"].ToString() == "tr" ? "Mail Adresiniz" : "Your Adress")">
+                    <textarea name="message" placeholder="@(Session["dil"] == null ? "Konu Hakkında Bilgi Alabilirmiyiz" : Session["dil"].ToString() == "tr" ? "Konu Hakkında Bilgi Alabilirmiyiz" : "What about?")?"></textarea>
+                    <button type="submit" class="thm-btn">@(Session["dil"] == null ? "Mesajı Yolla" : Session["dil"].ToString() == "tr" ? "Mesajı Yolla" : "Send Us")</button>
+                </form>
+            </div><!-- /.col-lg-7 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<div class="google-map" id="home-one-map" data-map-lat="40.712784" data-map-lng="-74.005941" data-icon-path="images/map-marker.png" data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom="11" data-markers="{
+     &quot;marker-1&quot;: [40.712784, -74.005941, &quot;<h4>Main Office</h4><p>Babylon Branch , Lindenhurst, UK</p>&quot;],
+            &quot;marker-2&quot;: [40.728157, -74.077642, &quot;<h4>Branch Office</h4> <p>291 Park Ave S, East Meadow, UK</p>&quot;]
+        }">
+
+    </div>
+

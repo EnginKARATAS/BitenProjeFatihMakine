@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "productdetails";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<section class="sec-pad project-details-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img style="width:100%;object-fit:contain;" src="@TempData["urunResim"]" alt="Awesome Image">
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="single-service-page-content">
+                    <h3>@TempData["detayAd"]</h3>
+                    <br>
+                    <p>
+                        @TempData["detayAciklama"]
+                                        <br>
+                                        <table class="table table-hover" <thead="">
+                          <tbody><tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Sipariş Kodu</th>
+                              <th scope="col">Ürün Kodu</th>
+                              <th scope="col">Açıklama</th>
+                              <th scope="col">Kademe Sayısı</th>
+                              <th scope="col">Cevap Süresi</th>
+                              <th scope="col">Termik Çıkış</th>
+                              <th scope="col">Gerilim</th>
+                              <th scope="col">FAZ</th>
+                          </tr>
+
+                      </tbody><tbody>
+
+                      <tr>
+                      <th scope="row">1</th>
+                      <td>GA-110</td>
+                      <td>SMART72CL / COM</td>
+                      <td style="color:#9370DB;">
+                      12 Kademe, 5A Çıkışlı, kademelerine 1-2-3 fazlı
+                      endüktif veya kapasitif yük bağlanabilir, uzaktan
+                      erişimle kontrol edilebilir röle                      </td>
+                      <td>18</td>
+                      <td>150 ms
+                      </td><td>VAR</td>
+                      <td>250 ms
+                      </td><td>MONOFAZE</td>
+
+                      </tr>
+
+
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>GA-110</td>
+                          <td>
+                              SMART
+                              82RL / COM
+                          </td>
+                          <td style="color:#9370DB;">
+                              20 ms cevap süreli, 12 Kademe, 5A Çıkışlı,
+                              kademelerine 1-2-3 fazlı endüktif veya kapasitif
+                              yük bağlanabilir, 3 adet gücü ayarlanabilen
+                              şönt reaktör kontrolü (SVC)
+                          </td>
+                          <td>22</td>
+                          <td>150 ms
+                          </td><td>VAR</td>
+                          <td>150 ms
+                          </td><td>MONOFAZE</td>
+                      </tr>
+
+
+                      <tr>
+                          <th scope="row">3</th>
+                          <td>GU-1170</td>
+                          <td>
+                              SMART
+                              12CL / COM
+                          </td>
+                          <td style="color:#9370DB;">
+                              OG referanslı, 12 Kademe, 5A Çıkışlı, kademelerine
+                              1-2-3 fazlı endüktif veya kapasitif yük bağlanabilir,
+                              3 adet gücü ayarlanabilen şönt reaktör kontrolü (SVC)
+
+                          </td>
+                          <td>16</td>
+                          <td>200 ms
+                          </td><td>VAR</td>
+                          <td>200 ms
+                          </td><td>MONOFAZE</td>
+                      </tr>
+
+                      <tr>
+                          <th scope="row">4</th>
+                          <td>GP-10</td>
+                          <td>
+                              SMART
+                              12CL / COM
+                          </td>
+                          <td style="color:#9370DB;">
+                              18 Kademe, 5A Çıkışlı, kademelerine 1-2-3 fazlı
+                              endüktif veya kapasitif yük bağlanabilir, uzaktan
+                              erişimle kontrol edilebilir röle
+                          </td>
+                          <td>126</td>
+                          <td>233 ms
+                          </td><td>VAR</td>
+                          <td>120 ms
+                          </td><td>MONOFAZE</td>
+                      </tr>
+
+                      </tbody>
+                      </table>
+                                        <h3>@TempData["detayBaslik"]</h3>
+                                        <br>
+
+                </div><!-- /.single-service-page-content -->
+
+            </div><!-- /.col-lg-8 -->
+            <!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
